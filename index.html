@@ -18,8 +18,15 @@ var yesIsClicked = function() {
 alert("A biết mà =))");
 }
 
-window.onbeforeunload = function (event) {
-alert("Định chạy làng ah, Đâu có dễ híhí =))");
+  window.onbeforeunload = function (event) {
+  var message = 'Định chạy làng ah, Đâu có dễ híhí =)) EM MÀ TẮT CÁI NÀY ĐI, Mặc định là cóa nhé :3';
+  if (typeof event == 'undefined') {
+    event = window.event;
+  }
+  if (event) {
+    event.returnValue = message;
+  }
+  return message;
 }
 </script>
 <style>
